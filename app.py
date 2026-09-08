@@ -17,9 +17,11 @@ def square(n):
 def greet(name):
     return jsonify({'message': f'Hello, {name}!'})
 
+
 @app.route('/sum/<int:a>/<int:b>')
 def sum_nums(a, b):
     return jsonify({'result': a + b})
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
